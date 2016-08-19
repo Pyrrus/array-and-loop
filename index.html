@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Ping-Pong game</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <title>Ping-Pong game</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
+
 <body>
   <div class="jumbotron">
-    <h1>Ping-Pong</h1> 
+    <h1>Ping-Pong</h1>
   </div>
 
-	  <div class="row setHight">
-	  	<div class="col-md-3">
-	  		<h2>
-	  			About Ping-Pong
-	  		</h2>
-	  		<ul id="info">
-	  			<li><span class="pHeader">Created by:</span></li>
-	  			<li>Adam Gorbahn</li>
-	  			<li><span class="pHeader">GitHub Username/URL</span></li>
-	  			<li><a href="https://github.com/Pyrrus/">Pyrrus</a></li>
-	  			<li><span class="pHeader">Level 2 Test for:</span></li>
-	  			<li>Java</li>
-	  		</ul>
-	  		
-	  	</div>
-	  	<div class="col-md-9">
-	  		<h2>Let's play!</h2>
-	  		<h3>Rules</h3>
-	  		<p>Ping pong will count up your number from 1 with the following exceptons:</p>
-	  		<ol>
-	  			<li>Number divisible by 3 become "ping"</li>
-	  			<li>Number divisible by 5 become "pong"</li>
-	  			<li>Number divisible by 3 and 5 become "pingpong"</li>
-	  		</ol>
-	  		<form class="form-inline">
-			  <div class="form-group">
-			      <label>Enter your number here:</label>
-			      <input class="form-control" type="text" id="num" name="">
-			      <button class="btn" type="submit" name="button">Ping Pong!</button>
-			  </div>
-			</form>
+  <div class="row setHight">
+    <div class="col-md-3">
+      <h2>About Ping-Pong</h2>
+      <ul id="info">
+        <li><span class="pHeader">Created by:</span></li>
+        <li>Adam Gorbahn</li>
+        <li><span class="pHeader">GitHub Username/URL</span></li>
+        <li><a href="https://github.com/Pyrrus/">Pyrrus</a></li>
+        <li><span class="pHeader">Level 1 Test for:</span></li>
+        <li>Intro to Programming</li>
+      </ul>
+    </div>
 
-			<ul id="output">
-			</ul>
-	  		
-	  	</div>
-	  </div>
+    <div class="col-md-9">
+      <h2>Let's play!</h2>
+      <h3>Rules</h3>
+      <p>Ping pong will count up your number from 1 with the following exceptons:</p>
+      <ol>
+        <li>Number divisible by 3 become "ping"</li>
+        <li>Number divisible by 5 become "pong"</li>
+        <li>Number divisible by 3 and 5 become "pingpong"</li>
+      </ol>
+      <form class="form-inline">
+        <div class="form-group">
+          <label>Enter your number here:</label>
+          <input class="form-control" type="text" id="num" name="">
+          <button class="btn" type="submit" name="button">Ping Pong!</button>
+        </div>
+      </form>
+      <ul id="output">
+      </ul>
+    </div>
+  </div>
 
 </body>
+
 </html>
