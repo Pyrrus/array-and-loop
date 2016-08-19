@@ -20,6 +20,13 @@ var pingPong = function (number) {
   return holder;
 }
 
+var display = function(data) {
+  $(".remove").remove();
+  for (var i = 0; i < data.length; i++) {
+    $("#output").append("<li class='remove'>" + data[i] + "</li>");
+  }
+}
+
 // Jquery ready
 $(document).ready(function() {
 
