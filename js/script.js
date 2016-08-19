@@ -9,7 +9,7 @@ var ballRight = function () {
    setTimeout(function() { 
     $("#ball").removeClass("leftM")
     $("#ball").addClass("rightM")
-  }, time += 2000);
+  }, time += 3000);
 
    setTimeout(function (argument) {
      $("#ball").removeClass("right");
@@ -21,7 +21,7 @@ var ballLeft = function () {
    setTimeout(function() { 
     $("#ball").removeClass("rightM")
     $("#ball").addClass("leftM")
-  }, time += 2000);
+  }, time += 3000);
 
    setTimeout(function (argument) {
      $("#ball").removeClass("left");
