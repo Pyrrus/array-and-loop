@@ -6,7 +6,7 @@
 
 ## Description
 
-This page uses input to find what number to get the a ping, a pong or both.
+This page uses input to find what number to get the a ping, a pong or both. Also, set both user interface and business logic in the my JavaScript.
 
 ## User interface & business logic
 
@@ -17,6 +17,7 @@ User input    | Output (Business login)
 
 The business logic:
 
+```
 if ((number % 3 === 0) && (number % 5 === 0))
 	"pingpong"
 else if (number % 3 === 0)
@@ -25,6 +26,7 @@ else if (number % 5 === 0)
 	"pong"
 else
 	number
+```
 
 ## Setup/Installation Requirements
 
