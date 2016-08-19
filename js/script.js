@@ -14,7 +14,7 @@ var ballRight = function () {
    setTimeout(function (argument) {
      $("#ball").removeClass("right");
      $("#ball").addClass("left");
-   }, time += 3500);
+   }, time += 3000);
 }
 
 var ballLeft = function () {
@@ -26,7 +26,7 @@ var ballLeft = function () {
    setTimeout(function (argument) {
      $("#ball").removeClass("left");
      $("#ball").addClass("right")
-   }, time += 3500);
+   }, time += 3000);
 }
 
 function doSetTimeout(i) {
@@ -36,7 +36,6 @@ function doSetTimeout(i) {
 var pingPong = function(number) {
   var holder = [];
   $("#ball").removeClass("left");
-  $("#ball").removeClass("right");
   $("#ball").removeClass("leftM");
   $("#ball").removeClass("rightM");
   $("#ball").addClass("right");
