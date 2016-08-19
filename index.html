@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Ping-Pong game</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -14,43 +14,43 @@
     <h1>Ping-Pong</h1> 
   </div>
 
-  <div class="row">
-  	<div class="col-md-3">
-  		<h2>
-  			About Ping-Pong
-  		</h2>
-  		<p>
-  			Created by: <br />
-  			Adam Gorbahn <br />
-  			GitHub Username/URL <br />
-  			<a href="https://github.com/Pyrrus/">Pyrrus</a> <br />
-  			Level 2 Test for: <br />
-  			Java
-  		</p>
-  		
-  	</div>
-  	<div class="col-md-9">
-  		<h2>Let's play!</h2>
-  		<h3>Rules</h3>
-  		<p>Ping pong will count up your number from 1 with the following exceptons:</p>
-  		<ol>
-  			<li>Number divisible by 3 become "ping"</li>
-  			<li>Number divisible by 5 become "pong"</li>
-  			<li>Number divisible by 3 and 5 become "pingpong"</li>
-  		</ol>
-  		<form class="form-inline">
-		  <div class="form-group">
-		      <label>Enter your number here:</label>
-		      <input class="form-control" type="text" id="num" name="">
-		      <button class="btn" type="submit" name="button">Ping Pong!</button>
-		  </div>
-		</form>
+	  <div class="row setHight">
+	  	<div class="col-md-3">
+	  		<h2>
+	  			About Ping-Pong
+	  		</h2>
+	  		<p>
+	  			<span class="pHeader">Created by:</span> <br />
+	  			Adam Gorbahn <br />
+	  			<span class="pHeader">GitHub Username/URL</span> <br />
+	  			<a href="https://github.com/Pyrrus/">Pyrrus</a> <br />
+	  			<span class="pHeader">Level 2 Test for:</span> <br />
+	  			Java
+	  		</p>
+	  		
+	  	</div>
+	  	<div class="col-md-9">
+	  		<h2>Let's play!</h2>
+	  		<h3>Rules</h3>
+	  		<p>Ping pong will count up your number from 1 with the following exceptons:</p>
+	  		<ol>
+	  			<li>Number divisible by 3 become "ping"</li>
+	  			<li>Number divisible by 5 become "pong"</li>
+	  			<li>Number divisible by 3 and 5 become "pingpong"</li>
+	  		</ol>
+	  		<form class="form-inline">
+			  <div class="form-group">
+			      <label>Enter your number here:</label>
+			      <input class="form-control" type="text" id="num" name="">
+			      <button class="btn" type="submit" name="button">Ping Pong!</button>
+			  </div>
+			</form>
 
-		<ul id="output">
-		</ul>
-  		
-  	</div>
-  </div>
+			<ul id="output">
+			</ul>
+	  		
+	  	</div>
+	  </div>
 
 </body>
 </html>
