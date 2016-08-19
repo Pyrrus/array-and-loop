@@ -1,3 +1,5 @@
+// back end
+
 // set the global var to help with 
 // the timeing of the css animation.
 var time = 0;
