@@ -15,6 +15,17 @@ User input    | Output (Business login)
 6             | [1, 2, ping, 4, pong]
 20            | [1, 2, ping, 4, pong, 6, 7, 8, ping, pong, 11, ping, 13, 14, pingpong, 16, 17, ping, 19, pong]
 
+The business logic:
+
+if ((number % 3 === 0) && (number % 5 === 0))
+	"pingpong"
+else if (number % 3 === 0)
+	"ping"
+else if (number % 5 === 0)
+	"pong"
+else
+	number
+
 ## Setup/Installation Requirements
 
 * Just need a web browser
