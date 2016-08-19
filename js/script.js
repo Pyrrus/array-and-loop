@@ -1,9 +1,9 @@
 var validation = function(number) {
-    var pattern = /^\d+$/;
-    return pattern.test(number);
+  var pattern = /^\d+$/;
+  return pattern.test(number);
 }
 
-var pingPong = function (number) {
+var pingPong = function(number) {
   var holder = [];
   for (var i = 1; i <= number; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)) {
@@ -30,7 +30,7 @@ var display = function(data) {
 // Jquery ready
 $(document).ready(function() {
 
-  $("button").click(function (event) {
+  $("button").click(function(event) {
     var number = $("#num");
     var data = [];
     if (validation(number.val())) {
@@ -42,5 +42,5 @@ $(document).ready(function() {
     }
     event.preventDefault();
   });
-  
+
 });
