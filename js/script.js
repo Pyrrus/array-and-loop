@@ -1,17 +1,55 @@
+var time = 0;
+
 var validation = function(number) {
   var pattern = /^\d+$/;
   return pattern.test(number);
 }
 
+var ballRight = function () {
+   setTimeout(function() { 
+    $("#ball").removeClass("leftM")
+    $("#ball").addClass("rightM")
+  }, time += 2000);
+
+   setTimeout(function (argument) {
+     $("#ball").removeClass("right");
+     $("#ball").addClass("left");
+   }, time += 3500);
+}
+
+var ballLeft = function () {
+   setTimeout(function() { 
+    $("#ball").removeClass("rightM")
+    $("#ball").addClass("leftM")
+  }, time += 2000);
+
+   setTimeout(function (argument) {
+     $("#ball").removeClass("left");
+     $("#ball").addClass("right")
+   }, time += 3500);
+}
+
+function doSetTimeout(i) {
+  setTimeout(function() { alert(i); }, 100);
+}
+
 var pingPong = function(number) {
   var holder = [];
+  $("#ball").removeClass("left");
+  $("#ball").removeClass("right");
+  $("#ball").removeClass("leftM");
+  $("#ball").removeClass("rightM");
+  $("#ball").addClass("right");
+  time = 0;
   for (var i = 1; i <= number; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)) {
-      holder.push("pingpong")
+      holder.push("pingpong");
     } else if (i % 3 === 0) {
-      holder.push("ping")
+      holder.push("ping");
+      ballRight();
     } else if (i % 5 === 0) {
-      holder.push("pong")
+      holder.push("pong");
+      ballLeft();
     } else {
       holder.push(i);
     }
