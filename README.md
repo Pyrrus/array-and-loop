@@ -1,32 +1,39 @@
 # Ping-pong site
 
-## Ping-pong using Javascript & Jquery, 8/19/16
+## Ping-pong using Javascript & Jquery, 8/24/16
 
 #### By **Adam Gorbahn**
 
 ## Description
 
-This page uses input to find what number to get the a ping, a pong or both. Also, set both user interface and business logic in the my JavaScript.
+This page uses input to find what number to get the a ping, a pong or both. 
 
-## User interface & business logic
+* Any numbers divisible with 3 will get ping
 
-User input    | Output (Business login)
+* Any numbers divisible with 5 will get pong
+
+* Any numbers divisible with 15 will get pingpong
+
+## Specifications
+
+#### The program will replace numbers divisible by 3 with the ping
+
+User input    | Output 
 ------------- | -------------
-6             | [1, 2, ping, 4, pong]
-20            | [1, 2, ping, 4, pong, 6, 7, 8, ping, pong, 11, ping, 13, 14, pingpong, 16, 17, ping, 19, pong]
+3             | 1, 2, ping
 
-The business logic:
 
-```
-if ((number % 3 === 0) && (number % 5 === 0))
-	"pingpong"
-else if (number % 3 === 0)
-	"ping"
-else if (number % 5 === 0)
-	"pong"
-else
-	number
-```
+#### The program will replace numbers divisible by 5 with the pong
+
+User input    | Output 
+------------- | -------------
+5             | 1, 2, ping, 4, pong
+
+#### The program will replace numbers divisible by 15 with the pingpong
+
+User input    | Output 
+------------- | -------------
+20            | 1, 2, ping, 4, pong, 6, 7, 8, ping, pong, 11, ping, 13, 14, pingpong, 16, 17, ping, 19, pong
 
 ## Setup/Installation Requirements
 

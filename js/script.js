@@ -50,17 +50,8 @@ var ballLeft = function () {
 }
 
 // set the word for ping and pong 
-// reset the ball and time.
 var pingPong = function(number) {
   var holder = [];
-
-  // reset the ball
-  $("#ball").removeClass("left");
-  $("#ball").removeClass("leftM");
-  $("#ball").removeClass("rightM");
-  $("#ball").addClass("right");
-  time = 0;
-  // end ball
 
   // set the ping and pong to the array
   for (var i = 1; i <= number; i++) {
@@ -68,23 +59,42 @@ var pingPong = function(number) {
       holder.push("pingpong");
     } else if (i % 3 === 0) {
       holder.push("ping");
-      ballRight();
     } else if (i % 5 === 0) {
       holder.push("pong");
-      ballLeft();
     } else {
       holder.push(i);
     }
   }
-
   return holder;
 }
 
+// reset the display and 
+// ball timing
+var reset = function () {
+   $(".remove").remove();
+
+   // reset the ball
+  $("#ball").removeClass("left");
+  $("#ball").removeClass("leftM");
+  $("#ball").removeClass("rightM");
+  $("#ball").addClass("right");
+  time = 0;
+  // end ball
+}
+
+// add the ball animation
 // This display the information 
 // for the array
 var display = function(data) {
-  $(".remove").remove();
+
+  reset();
+ 
   for (var i = 0; i < data.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      ballRight();
+    } else if ((i + 1) % 5 === 0) {
+      ballLeft();
+    }
     $("#output").append("<li class='remove'>" + data[i] + "</li>");
   }
 }
