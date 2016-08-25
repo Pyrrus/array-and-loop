@@ -1,28 +1,28 @@
 // Back end
 
-// set the global var to help with 
+// set the global var to help with
 // the timeing of the css animation.
 var time = 0;
 
-// add form validation to test the it 
+// add form validation to test the it
 // have number or not
 var validation = function(number) {
   var pattern = /^\d+$/;
   return pattern.test(number);
 }
 
-// add the classes for the ball 
+// add the classes for the ball
 // go to right
 var ballRight = function () {
-  // set time out to give the ball 
+  // set time out to give the ball
   // time to go to the other side of
   // the screen
-   setTimeout(function() { 
+   setTimeout(function() {
     $("#ball").removeClass("leftM")
     $("#ball").addClass("rightM")
   }, time += 3000);
 
-   // remove the right class and 
+   // remove the right class and
    // add left class
    setTimeout(function (argument) {
      $("#ball").removeClass("right");
@@ -30,18 +30,18 @@ var ballRight = function () {
    }, time += 3000);
 }
 
-// add the classes for the ball 
+// add the classes for the ball
 // go to left
 var ballLeft = function () {
-    // set time out to give the ball 
+    // set time out to give the ball
     // time to go to the other side of
     // the screen
-   setTimeout(function() { 
+   setTimeout(function() {
     $("#ball").removeClass("rightM")
     $("#ball").addClass("leftM")
   }, time += 3000);
 
-   // remove the left class and 
+   // remove the left class and
    // add right class
    setTimeout(function (argument) {
      $("#ball").removeClass("left");
@@ -49,7 +49,7 @@ var ballLeft = function () {
    }, time += 3000);
 }
 
-// set the word for ping and pong 
+// set the word for ping and pong
 var pingPong = function(number) {
   var holder = [];
 
@@ -68,7 +68,7 @@ var pingPong = function(number) {
   return holder;
 }
 
-// reset the display and 
+// reset the display and
 // ball timing
 var reset = function () {
    $(".remove").remove();
@@ -84,23 +84,23 @@ var reset = function () {
 
 // ball setup for the page.
 var ballSetup = function (number) {
-  if ((i + 1) % 3 === 0) {
+  if ((number) % 3 === 0) {
     ballRight();
-  } else if ((i + 1) % 5 === 0) {
+  } else if ((number) % 5 === 0) {
     ballLeft();
   }
 }
 
 // add the ball animation
-// This display the information 
+// This display the information
 // for the array
 var display = function(data) {
 
   reset();
- 
+
   for (var i = 0; i < data.length; i++) {
     ballSetup(i + 1);
-    
+
     $("#output").append("<li class='remove'>" + data[i] + "</li>");
   }
 }
