@@ -82,6 +82,15 @@ var reset = function () {
   // end ball
 }
 
+// ball setup for the page.
+var ballSetup = function (number) {
+  if ((i + 1) % 3 === 0) {
+    ballRight();
+  } else if ((i + 1) % 5 === 0) {
+    ballLeft();
+  }
+}
+
 // add the ball animation
 // This display the information 
 // for the array
@@ -90,11 +99,8 @@ var display = function(data) {
   reset();
  
   for (var i = 0; i < data.length; i++) {
-    if ((i + 1) % 3 === 0) {
-      ballRight();
-    } else if ((i + 1) % 5 === 0) {
-      ballLeft();
-    }
+    ballSetup(i + 1);
+    
     $("#output").append("<li class='remove'>" + data[i] + "</li>");
   }
 }
